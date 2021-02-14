@@ -67,7 +67,7 @@ h1,h2,h3,h4,h5,h6{
 
 }
 .btn-primary:hover{
-	background-color: rgb(228, 41, 104);
+	background-color: rgb(255, 83, 118);
 	color: rgb(255, 255, 255);
 	cursor: pointer;
 }
@@ -255,6 +255,9 @@ color: crimson;
 	#about-me .container .row .img-outer img{
 		width: 90%;
 	}
+	#about-me .container .social-icons i{
+   margin-left: 15px;
+	}
 	
 }
 /* about me end */
@@ -282,6 +285,12 @@ color: crimson;
 	 border: 2px rgb(231, 231, 231) solid;
 	 padding: 25px;  
 	 text-align: center;
+	}
+	#our-services-sec .box-container .service-box i{
+   font-size: 50px;
+	 color: crimson;
+	 font-weight: 600;
+	 margin-bottom: 10px;
 	}
 	#our-services-sec .box-container .service-box hr{
 		width: 15%;
@@ -540,6 +549,113 @@ margin-top: 15px;
 }
 
 /* blog sec end */
+/* blog hover star */
+#blog .card .boxs{
+    background: #000;
+    font-family: 'Sora', sans-serif;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    position: relative;
+    transition: all 0.4s ease-in;
+}
+#blog .card .boxs:hover{ box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.4); }
+#blog .card .boxs:before{
+    content: "";
+    background: linear-gradient(-225deg, #fb4563 50%, #fb4563 100%);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: rotate3d(0,0,1,45deg);
+    transform-origin: 0 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: all 0.4s ease-out 0s;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+#blog .card .boxs:hover:before{
+    opacity: 0.8;
+    transform: rotate3d(0,0,1,15deg);
+}
+#blog .card .boxs img{
+    width: 100%;
+    height: auto;
+    transform: scale(1.1) translateY(4%);
+    transition: all 0.4s ease-in;
+}
+#blog .card .boxs:hover img{
+    opacity: 0.4;
+    transform: scale(1.1) translateY(-4%);
+}
+#blog .card .boxs .box-content{
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transition: all 0.4s ease-out;
+}
+#blog .card .boxs:hover .box-content{
+    opacity: 1;
+    top: 30px;
+}
+#blog .card .boxs .title{
+    font-size: 22px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0 0 2px;
+}
+#blog .card .boxs .post{
+    color: #fbfbfb;
+    font-size: 15px;
+    font-weight: 500;
+    font-style: italic;
+    text-transform: capitalize;
+    display: block;
+}
+#blog .card .boxs .icon{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    opacity: 0;
+    position: absolute;
+    bottom: -50px;
+    right: 10px;
+    z-index: 2;
+    transition: all 0.4s ease-in;
+}
+#blog .card .boxs:hover .icon{
+    opacity: 1;
+    bottom: 10px;
+}
+#blog .card .boxs .icon li{
+    display: inline-block;
+    margin: 0 4px;
+}
+#blog .card .boxs .icon li a{
+    color: #222;
+    background: #fff;
+    font-size: 14px;
+    text-align: center;
+    line-height: 32px;
+    height: 30px;
+    width: 30px;
+    display: block;
+    transition: all 0.3s ease 0s;
+}
+#blog .card .boxs .icon li a:hover{
+    border-radius: 15px 0;
+    box-shadow: 0 0 10px #999 inset;
+}
+/* @media only screen and (max-width:990px){
+    #blog .card .box { margin: 0 0 30px; }
+} */
+
+/* blog hover end */
 
 /* contact sec start */
 #contact .work-head{
@@ -569,6 +685,9 @@ margin-top: 15px;
 	text-transform: capitalize;
 	font-weight: 500;
 	font-size: 25px;
+}
+#contact .contact-details a{
+	color: black;
 }
 #contact .contact-details p{
 	margin-top:7px ;
