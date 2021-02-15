@@ -214,7 +214,9 @@ color: crimson;
 }
 /* first section content end */
 /* about me start */
-
+#about-me .row .col{
+	margin: 0 15px;
+}
 #about-me .aboutme-content h2{
 	font-size: 37px;
 	margin-bottom: 15px;
@@ -274,7 +276,7 @@ color: crimson;
 		text-align: center;
 	}
 	#about-me .container .row .img-outer img{
-		width: 90%;
+		width: 100%;
 	}
 	#about-me .container .social-icons i{
    margin-left: 15px;
@@ -282,6 +284,109 @@ color: crimson;
 	
 }
 /* about me end */
+/* about hover start */
+.boxes{
+    font-family: 'Merriweather Sans', sans-serif;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transition: all .5s;
+}
+.boxes:hover{ box-shadow: 3px 3px 5px #999; }
+.boxes:before,
+.boxes:after{
+    content: "";
+    background: radial-gradient(circle at 23% 60%,rgb(146, 62, 79),rgb(218, 37, 73) 40%);
+    width: 150%;
+    height: 150%;
+    opacity: 0;
+    transform: rotate(45deg);
+    position: absolute;
+    top:-10.5%;
+    right:-150%;
+    z-index: 1;
+    transition: all 0.35s ease;
+}
+.boxes:after{
+    background: rgb(177, 37, 65);
+    width: 65%;
+    height: 65%;
+    right: auto;
+    left: -20%;
+    top: -65%;
+}
+.boxes:hover:before{
+    opacity: 0.6;
+    right: -85%;
+}
+.boxes:hover:after{
+    opacity: 1;
+    top: -42%;
+}
+.boxes img{
+    width: 100%;
+    height: auto;
+    transition: all 0.5s ease;
+}
+.boxes:hover img{ transform: scale(1.2); }
+.boxes .box-content{
+    text-align: right;
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: -100%;
+    z-index: 2;
+    transition: all .5s;
+}
+.boxes:hover .box-content{ right: 5%; }
+.boxes .title{
+    color: #dddddd;
+    font-size: 23px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 3px 0;
+}
+.boxes .post{
+	color: #dddddd;
+    font-size: 16px;
+    text-transform: capitalize;
+    margin: 0 0 10px;
+    display: block;
+}
+.boxes .icon{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.boxes .icon li{
+    display: inline-block;
+    margin: 0 4px;
+}
+.boxes .icon li a{
+    color: #fff;
+    background-color: #1e272e;
+    font-size: 18px;
+    text-align: center;
+    line-height: 35px;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.3s;
+}
+.boxes .icon li  a:hover{
+    color: crimson;
+    background-color: #fff;
+    border-radius: 10%;
+    box-shadow: 0 0 5px #1e272e inset;
+}
+@media only screen and (max-width:990px){
+    .boxes { margin: 0 0 30px; }
+}
+@media only screen and (max-width:479px){
+    .boxes .title{ font-size: 20px; }
+}
+/* about hover end */
 /* our services start */
 #our-services-sec{
 	background-color: rgb(251, 249, 245);
@@ -326,6 +431,10 @@ color: crimson;
 			width: 80%;
 			margin: 0 auto;
 		}
+		#our-services-sec .our-services{
+ width: 100%;
+}
+		
 }
 /* our services end */
 /* hire section start */
@@ -389,6 +498,7 @@ margin-top: 15px;
 #work .work-head{
 	margin: 0 auto;
 	text-align: center;
+	width: 50%;
 }
 #work .work-head h2{
 	text-transform: uppercase;
@@ -514,7 +624,8 @@ margin-top: 15px;
     display: block;
     transition: all 0.3s ease 0s;
 }
-.box .icon li a:hover{ box-shadow: 3px 3px rgba(255,255,255,0.5); }
+.box .icon li a:hover{ box-shadow: 3px 3px rgba(255,255,255,0.5);
+color: crimson; }
 
 @media(max-width: 992px){
 		#work .row{
@@ -522,6 +633,10 @@ margin-top: 15px;
 			flex-direction: column;
 			margin: 0 auto;
 		}
+		#work .work-head{
+
+	width: 100%;
+}
 }
 /* section work hover end */
 
@@ -567,6 +682,9 @@ margin-top: 15px;
 			flex-direction: column;
 			margin: 0 auto;
 		}
+		#blog .container .row .col .work-head{
+	width: 100%;
+}
 }
 
 /* blog sec end */
@@ -671,6 +789,7 @@ margin-top: 15px;
 #blog .card .boxs .icon li a:hover{
     border-radius: 15px 0;
     box-shadow: 0 0 10px #999 inset;
+		color: crimson;
 }
 /* @media only screen and (max-width:990px){
     #blog .card .box { margin: 0 0 30px; }
@@ -758,6 +877,9 @@ margin-top: 15px;
 	#contact .row .input-50{
 		width: 94.5%;
 	}
+	#contact .work-head{
+	width: 100%;
+}
 }
 
 @media(max-width: 805px){
