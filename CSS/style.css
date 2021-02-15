@@ -637,6 +637,9 @@ color: crimson; }
 
 	width: 100%;
 }
+.clients .row .client-content{
+	width: 100%;	
+}
 }
 /* section work hover end */
 
